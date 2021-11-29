@@ -14,11 +14,10 @@ df = pd.DataFrame({
     'order' : [3,1,2]
 })
 
-chart = alt.Chart(df).mark_
-# chart = alt.Chart(df).mark_arc(outerRadius=80).encode(
-#     alt.Theta('value:Q', scale=alt.Scale(range=[2.356, 8.639])),
-#     alt.Color('category:N',scale=alt.Scale(domain=category, range=color),legend=alt.Legend(orient='right', title=None)),
-#     order='order:Q'   
-# ).properties(width=150, height=150).configure_view(strokeOpacity=0)
+chart = alt.Chart(df).mark_arc(outerRadius=80).encode(
+    alt.Theta('value:Q', scale=alt.Scale(range=[2.356, 8.639])),
+    alt.Color('category:N',scale=alt.Scale(domain=category, range=color),legend=alt.Legend(orient='right', title=None)),
+    order='order:Q'   
+).properties(width=150, height=150).configure_view(strokeOpacity=0)
 
 chart.show()
